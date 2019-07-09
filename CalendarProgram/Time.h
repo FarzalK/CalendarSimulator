@@ -1,0 +1,23 @@
+#ifndef TIME_H
+#define TIME_H
+
+using namespace std;
+
+class Time
+{
+  friend ostream& operator<<(ostream, Time&);
+  public:
+    Time(int=0, int=0, int=0);
+    void set(int, int, int);
+    void print();
+    bool lessThan(Time&);
+    bool operator<(Time&);
+
+  private:
+    int hours;
+    int minutes;
+    int seconds;
+    int convertToSecs();
+};
+
+#endif

@@ -1,0 +1,50 @@
+#include "View.h"
+#define MAX_ARR_SIZE 128
+
+int View::mainMenu()
+{
+  int numOptions = 1;
+  int selection  = -1;
+
+  cout << endl;
+  cout << "(1) Add event" << endl;
+  cout << "(0) Exit" << endl;
+
+  while (selection < 0 || selection > numOptions) {
+    cout << "Enter your selection: ";
+    cin  >> selection;
+  }
+
+  return selection;
+}
+
+void View::userInput(string& title, int& day, int& month, int& year, int& hour, int& minute, int& priority)
+{
+  cout << "Title:   ";
+  cin  >> title;
+  cout << "Day:   ";
+  cin  >> day;
+  cout << "Month: ";
+  cin  >> month;
+  cout << "Year:  ";
+  cin  >> year;
+  cout << "Hour:  ";
+  cin  >> hour;
+  cout << "Minute:  ";
+  cin  >> minute;
+  cout << "Priority:  ";
+  cin  >> priority;
+}
+
+void View::eventType(string& eventType)
+{
+  cout << "Event Type:   ";
+  cin  >> eventType;
+}
+
+void View::printCalendar(Calendar& calendar)
+{
+  //cout << endl << endl << "CALENDAR: Life Events" << endl;
+  calendar.print();
+  cout << endl;
+}

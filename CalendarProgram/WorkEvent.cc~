@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+#include "WorkEvent.h"
+
+WorkEvent::WorkEvent(string n, int p)
+  :Event(n,p)
+{
+}
+
+bool WorkEvent::lessThan(Event *e){
+  //event priorities
+  /*
+  if(priority < e->getPriority()){
+    return true;
+  }
+  return false;
+  */
+  
+  if(priority <= e->getPriority()){
+    return true;
+  }
+  return false;
+}
+
+bool WorkEvent::operator<(Event *e){
+  if(this->priority < e->getPriority()){
+    return true;
+  }
+  return false;
+}

@@ -1,0 +1,46 @@
+c++ Calendar Program with a School and Work Calendar
+Farzal Khan
+101045962
+
+Purpose:
+A program that represents a calendar in which you can add events to.
+These events have respective names and dates which are added to a calendar
+with the help of utilizing a templated list system.
+
+Files include:
+	SchoolEvent.h
+	SchoolEvent.cc
+	WorkEvent.h
+	WorkEvent.cc
+        List.h
+	List.o
+        View.h
+        View.cc
+        Control.h
+        Control.cc
+	Calendar.cc
+	Calendar.h
+	Date.cc
+	Date.h
+	Event.cc
+	Event.h
+	Time.cc
+	Time.h
+	main.cc
+	Makefile
+	Array.h
+	Array.o
+	EventServer.h
+	EventServer.o
+	in.txt
+	README.txt
+	
+How to run the program:
+1. open command prompt window
+2. go to the directory in which the "A4" folder is located
+3. go into the A4 folder
+4. in the command prompt type "make" to run the makefile
+5. then type "./cal < in.txt" and enter 
+
+ISSUES:
+No apparent issues.

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+#include "SchoolEvent.h"
+
+SchoolEvent::SchoolEvent(string n, int p)
+  :Event(n,p)
+{
+}
+
+bool SchoolEvent::lessThan(Event *e){
+  //event dates
+  /*
+  if(date < e->getDate()){
+    return true;
+  }
+  return false;
+  */
+  
+  if(date.lessThan(e->getDate())){
+    return true;
+  }
+  return false;
+  
+}
+
+bool SchoolEvent::operator<(Event *e){
+  if(this->date < e->getDate()){
+    return true;
+  }
+  return false;
+}
